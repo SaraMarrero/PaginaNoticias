@@ -1,4 +1,356 @@
-@media (min-width: 375px) and (max-width: 1440px){}
+@media (min-width: 375px) and (max-width: 1440px){
+        /*---------- GENERAL ----------*/
+        @import url('https://fonts.google.com/specimen/Inter');
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body{
+            font-family: "Inter", sans-serif;
+        }
+    
+        .container{
+            width: 90%;
+            margin: 0 auto;
+        }
+    
+        /*---------- HEADER ----------*/
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            padding-bottom: 1.5rem;
+        }
+    
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            margin-left: -100%;
+            transition: all 0.2s linear;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+        }
+
+        .main-nav.show {
+            margin-left: 0;
+        }
+        
+        .nav-links {
+            background-color: #F2F2F2;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            align-items: center;
+        }
+
+        .link-item::after {
+            position: absolute;
+            content: "";
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            transition: 0.3s ease all;
+        }
+        
+        .link-item:hover::after {
+            width: 100%;
+        }
+        
+        .button-menu {
+            z-index: 200;
+            width: 40px;
+            height: 40px;
+            border: none;
+            display: flex;
+            background: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .button-menu span {
+            width: 90%;
+            height: 3px;
+            margin-top: 0.5em;
+            position: relative;
+            background-color: black;
+            border-radius: 3px;
+            transform-origin: 4px 0px;
+            transition: all 0.2s linear;
+        }
+
+        .button-menu.close span {
+            opacity: 1;
+            transform: rotate(45deg) translate(0px, 0px);
+            background-color: black;
+        }
+        
+        .button-menu.close span:nth-child(2) {
+            transform: rotate(-45deg) translate(-8px, 5px);
+        }
+        
+        .button-menu.close span:nth-child(3) {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            .button-menu {
+                display: none;
+            }
+            
+            .main-logo {
+                flex-basis: 30%;
+            }
+            
+            .main-nav {
+                position: static;
+                margin-left: 0;
+                flex-basis: 70%;
+                height: 100%;
+            }
+            
+            .nav-links {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-end;
+                background: white;
+            }
+            
+            .link-item {
+                display: inline-block;
+                margin-top: 0;
+                margin-right: 2rem;
+            }
+        }
+    
+        .link-item{
+            text-decoration: none;
+            color: hsl(233, 8%, 79%);
+            margin-left: 1em;
+            position: relative;
+        }
+    
+        .link-item:hover{
+            color: hsl(5, 85%, 63%);
+        }
+    
+        /*---------- SECTION UNO ----------*/
+        .sectionUno{
+            display: grid;
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(5, 20%);
+        }
+    
+        .fotoPrincipal{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    
+        .imgPrincipal{
+            display: none;
+        }
+        
+        .imgPrincipal2{
+            width: 100%;
+            height: 100%;
+        }
+    
+        .titulo{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+        }
+    
+        .titulo > h1{
+            width: 100%;
+            font-size: 47px;
+        }
+    
+        .masTexto{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            margin-top: -1em;
+        }
+    
+        .pMasTexto{
+            color: hsl(233, 8%, 79%);
+            font-size: 18px;
+            width: 90%;
+        }
+    
+        .leerMas{
+            margin-top: 1em;
+            padding: 1rem;
+            background-color: hsl(5, 85%, 63%);
+            color: white;
+            border: hidden;
+            width: 55%;
+            font-size: 15px;
+            margin-bottom: 15em;
+        }
+    
+        .leerMas:hover{
+            background-color: black;
+        }
+
+        .lateralDerecho{
+            grid-column: 1/2;
+            grid-row: 4/6;
+            background-color: black;
+            padding: 1.5rem;
+            margin-top: -1em;
+        }
+    
+        .h1Lateral{
+            color: hsl(35, 77%, 62%);
+            font-size: 30px;
+            margin-bottom: 0.5em;
+        }
+    
+        .hr{
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+        }
+    
+        .pSuperior{
+            font-weight: bold;
+            color: white;
+            margin-bottom: 0.5em;
+            font-size: 20px;
+        }
+    
+        .pInferior{
+            color: hsl(233, 8%, 79%);
+            font-size: 15px;
+        }
+    
+        /*---------- SECTION DOS ----------*/
+        .sectionDos{
+            margin-top: 5em;
+            display: grid;
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(3, 33.3333333333%);
+            grid-row-gap: 1em;
+            margin-bottom: 2em;
+        }
+    
+        .divUno{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: flex;
+            align-items: center;
+        }
+    
+        .imgUno{
+            width: 40%;
+        }
+    
+        .divUnoInterno{
+            width: 60%;
+            padding: 1rem;
+        }
+    
+        .divUnoInterno > h1{
+            color: hsl(233, 8%, 79%);
+            font-size: 35px;
+        }
+    
+        .divUnoInterno > h2{
+            color: hsl(240, 100%, 5%);
+            font-size: 23px;
+        }
+    
+        .divUnoInterno > h2:hover{
+            color: hsl(5, 85%, 63%);
+        }
+    
+        .divUnoInterno > p{
+            font-size: 15px;
+            color: lightslategray
+        }
+    
+        .divDos{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+        }
+    
+        .imgDos{
+            width: 40%;
+        }
+    
+        .divDosInterno{
+            width: 60%;
+            padding: 1rem;
+        }
+    
+        .divDosInterno > h1{
+            color: hsl(233, 8%, 79%);
+            font-size: 35px;
+        }
+    
+        .divDosInterno > h2{
+            color: hsl(240, 100%, 5%);
+            font-size: 23px;
+        }
+    
+        .divDosInterno > h2:hover{
+            color: hsl(5, 85%, 63%);
+        }
+    
+        .divDosInterno > p{
+            font-size: 15px;
+            color: lightslategray;
+        }
+    
+        .divTres{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            display: flex;
+            align-items: center;
+        }
+    
+        .imgTres{
+            width: 40%;
+        }
+    
+        .divTresInterno{
+            width: 60%;
+            padding: 1rem;
+        }
+    
+        .divTresInterno > h1{
+            color: hsl(233, 8%, 79%);
+            font-size: 35px;
+    
+        }
+    
+        .divTresInterno > h2{
+            color: hsl(240, 100%, 5%);
+            font-size: 23px;
+        }
+    
+        .divTresInterno > h2:hover{
+            color: hsl(5, 85%, 63%);
+        }
+    
+        .divTresInterno > p{
+            font-size: 15px;
+            color: lightslategray;
+        }
+}
 
 @media (min-width: 1440px){
     /*---------- GENERAL ----------*/
@@ -28,9 +380,13 @@
         padding-bottom: 2rem;
     }
 
+    .button-menu{
+        display: none;
+    }
+
     .link-item{
         text-decoration: none;
-        color: lightslategray;
+        color: hsl(233, 8%, 79%);
         margin-left: 1em;
     }
 
@@ -57,6 +413,10 @@
     .imgPrincipal{
         width: 100%;
         height: 100%
+    }
+
+    .imgPrincipal2{
+        display: none;
     }
 
     .lateralDerecho{
@@ -86,7 +446,7 @@
     }
 
     .pInferior{
-        color: lightslategray;
+        color: hsl(233, 8%, 79%);
         font-size: 20px;
     }
 
@@ -107,7 +467,7 @@
     }
 
     .pMasTexto{
-        color: lightslategray;
+        color: hsl(233, 8%, 79%);
         margin: 1em;
         font-size: 18px;
         width: 90%;
@@ -125,6 +485,122 @@
         margin-bottom: 2em;
     }
 
-    /*---------- SECTION UNO ----------*/
-    
+    .leerMas:hover{
+        background-color: black;
+    }
+
+    /*---------- SECTION DOS ----------*/
+    .sectionDos{
+        margin-top: 4em;
+        display: grid;
+        grid-template-columns: repeat(3, 33.3333333333%);
+        grid-template-rows: repeat(1, 100%);
+        margin-bottom: 2em;
+    }
+
+    .divUno{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        align-items: center;
+    }
+
+    .imgUno{
+        width: 40%;
+    }
+
+    .divUnoInterno{
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .divUnoInterno > h1{
+        color: hsl(233, 8%, 79%);
+        font-size: 50px;
+    }
+
+    .divUnoInterno > h2{
+        color: hsl(240, 100%, 5%);
+        font-size: 23px;
+    }
+
+    .divUnoInterno > h2:hover{
+        color: hsl(5, 85%, 63%);
+    }
+
+    .divUnoInterno > p{
+        font-size: 23px;
+        color: lightslategray
+    }
+
+    .divDos{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        align-items: center;
+    }
+
+    .imgDos{
+        width: 40%;
+    }
+
+    .divDosInterno{
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .divDosInterno > h1{
+        color: hsl(233, 8%, 79%);
+        font-size: 50px;
+    }
+
+    .divDosInterno > h2{
+        color: hsl(240, 100%, 5%);
+        font-size: 23px;
+    }
+
+    .divDosInterno > h2:hover{
+        color: hsl(5, 85%, 63%);
+    }
+
+    .divUnoInterno > p{
+        font-size: 23px;
+        color: lightslategray;
+    }
+
+    .divTres{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        display: flex;
+        align-items: center;
+    }
+
+    .imgTres{
+        width: 40%;
+    }
+
+    .divTresInterno{
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .divTresInterno > h1{
+        color: hsl(233, 8%, 79%);
+        font-size: 50px;
+
+    }
+
+    .divTresInterno > h2{
+        color: hsl(240, 100%, 5%);
+        font-size: 23px;
+    }
+
+    .divTresInterno > h2:hover{
+        color: hsl(5, 85%, 63%);
+    }
+
+    .divTresInterno > p{
+        font-size: 23px;
+        color: lightslategray;
+    }
 }

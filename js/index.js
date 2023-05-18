@@ -15,7 +15,7 @@ navWrapper.addEventListener('click', close);
 opcionesMenu.addEventListener('click', closeBurguer);
 
 // Funciones
-// Se muestra el menú
+// Se muestra el menú y le da estilos
 function open(){
     toggleButton.classList.toggle("close");
     navWrapper.classList.toggle("show");

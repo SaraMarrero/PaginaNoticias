@@ -4,7 +4,7 @@ Este pequeño proyecto es pequeña muestra de una página de noticias.
 La idea del proyecto ha sido sacada de la web Frontend Mentor.
 
 # Página principal
-![Imagen principal](/design/imgIndex.jpg)
+![Imagen principal](./assets/images/imgIndex.png)
 
 # 🪛Tecnologías
 Para llevar a cabo la realización de este proyecto, he utilizado:

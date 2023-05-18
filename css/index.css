@@ -31,7 +31,7 @@
     .link-item{
         text-decoration: none;
         color: lightslategray;
-        margin: 1em;
+        margin-left: 1em;
     }
 
     .link-item:hover{

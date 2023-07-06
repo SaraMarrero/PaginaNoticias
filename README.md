@@ -3,7 +3,7 @@ Este pequeño proyecto es pequeña muestra de una página de noticias.
 
 La idea del proyecto ha sido sacada de la web Frontend Mentor.
 
-# Página principal
+# 📸 Página principal
 ![Imagen principal](./assets/images/imgIndex.png)
 
 # 🪛Tecnologías

@@ -148,7 +148,7 @@
         .sectionUno{
             display: grid;
             grid-template-columns: repeat(1, 100%);
-            grid-template-rows: repeat(5, 20%);
+            grid-template-rows: repeat(6, auto);
         }
     
         .fotoPrincipal{
@@ -170,6 +170,8 @@
             grid-row: 2/3;
             display: flex;
             align-items: center;
+            width: 70%;
+            padding: 1rem;
         }
     
         .titulo > h1{
@@ -180,13 +182,17 @@
         .masTexto{
             grid-column: 1/2;
             grid-row: 3/4;
-            margin-top: -1em;
+            width: 100%;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-bottom: 2rem;
         }
     
         .pMasTexto{
             color: hsl(233, 8%, 79%);
-            font-size: 18px;
-            width: 90%;
+            padding: 1rem;
+            font-size: 25px;
+            width: 100%;
         }
     
         .leerMas{
@@ -197,7 +203,7 @@
             border: hidden;
             width: 55%;
             font-size: 15px;
-            margin-bottom: 15em;
+            
         }
     
         .leerMas:hover{
@@ -206,15 +212,14 @@
 
         .lateralDerecho{
             grid-column: 1/2;
-            grid-row: 4/6;
+            grid-row: 4/7;
             background-color: black;
-            padding: 1.5rem;
-            margin-top: -1em;
+            padding: 2rem;
         }
     
         .h1Lateral{
             color: hsl(35, 77%, 62%);
-            font-size: 30px;
+            font-size: 40px;
             margin-bottom: 0.5em;
         }
     
@@ -227,12 +232,14 @@
             font-weight: bold;
             color: white;
             margin-bottom: 0.5em;
-            font-size: 20px;
+            font-size: 30px;
+            padding: 0.5rem;
         }
     
         .pInferior{
             color: hsl(233, 8%, 79%);
-            font-size: 15px;
+            font-size: 27px;
+            padding: 1rem;
         }
     
         /*---------- SECTION DOS ----------*/
@@ -240,7 +247,7 @@
             margin-top: 5em;
             display: grid;
             grid-template-columns: repeat(1, 100%);
-            grid-template-rows: repeat(3, 33.3333333333%);
+            grid-template-rows: repeat(3, auto);
             grid-row-gap: 1em;
             margin-bottom: 2em;
         }
@@ -263,12 +270,12 @@
     
         .divUnoInterno > h1{
             color: hsl(233, 8%, 79%);
-            font-size: 35px;
+            font-size: 70px;
         }
     
         .divUnoInterno > h2{
             color: hsl(240, 100%, 5%);
-            font-size: 23px;
+            font-size: 30px;
         }
     
         .divUnoInterno > h2:hover{
@@ -276,7 +283,7 @@
         }
     
         .divUnoInterno > p{
-            font-size: 15px;
+            font-size: 22px;
             color: lightslategray
         }
     
@@ -298,12 +305,12 @@
     
         .divDosInterno > h1{
             color: hsl(233, 8%, 79%);
-            font-size: 35px;
+            font-size: 70px;
         }
     
         .divDosInterno > h2{
             color: hsl(240, 100%, 5%);
-            font-size: 23px;
+            font-size: 30px;
         }
     
         .divDosInterno > h2:hover{
@@ -311,7 +318,7 @@
         }
     
         .divDosInterno > p{
-            font-size: 15px;
+            font-size: 22px;
             color: lightslategray;
         }
     
@@ -333,13 +340,13 @@
     
         .divTresInterno > h1{
             color: hsl(233, 8%, 79%);
-            font-size: 35px;
+            font-size: 70px;
     
         }
     
         .divTresInterno > h2{
             color: hsl(240, 100%, 5%);
-            font-size: 23px;
+            font-size: 30px;
         }
     
         .divTresInterno > h2:hover{
@@ -347,7 +354,7 @@
         }
     
         .divTresInterno > p{
-            font-size: 15px;
+            font-size: 22px;
             color: lightslategray;
         }
 }
@@ -398,7 +405,9 @@
     .sectionUno{
         display: grid;
         grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(3, 33.3333333333%);
+        grid-template-rows: repeat(3, auto);
+        align-items: center;
+        justify-content: center;
     }
 
     .fotoPrincipal{
@@ -420,6 +429,7 @@
         grid-row: 2/3;
         display: flex;
         align-items: center;
+        padding: 3rem;
     }
 
     .titulo > h1{
@@ -431,13 +441,14 @@
         grid-column: 2/3;
         grid-row: 2/3;
         text-align: center;
-        margin-top: 15em;
+        
     }
 
     .pMasTexto{
         color: hsl(233, 8%, 79%);
         font-size: 18px;
         width: 90%;
+        margin: 0 auto;
     }
 
     .leerMas{
@@ -503,7 +514,7 @@
     }
 
     .imgUno{
-        width: 30%;
+        width: 25%;
     }
 
     .divUnoInterno{
@@ -538,7 +549,7 @@
     }
 
     .imgDos{
-        width: 30%;
+        width: 25%;
     }
 
     .divDosInterno{
@@ -573,7 +584,7 @@
     }
 
     .imgTres{
-        width: 30%;
+        width: 25%;
     }
 
     .divTresInterno{
@@ -617,7 +628,7 @@
     }
 
     .container{
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
 
@@ -692,7 +703,7 @@
         font-weight: bold;
         color: white;
         margin-bottom: 0.5em;
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .pInferior{
@@ -706,9 +717,9 @@
     }
 
     .titulo > h1{
-        width: 88%;
+        width: 90%;
         padding: 0.5rem;
-        font-size: 55px;
+        font-size: 50px;
     }
 
     .masTexto{
@@ -719,8 +730,8 @@
     .pMasTexto{
         color: hsl(233, 8%, 79%);
         margin: 1em;
-        font-size: 18px;
-        width: 90%;
+        font-size: 17px;
+        width: 100%;
     }
 
     .leerMas{
@@ -730,7 +741,7 @@
         background-color: hsl(5, 85%, 63%);
         color: white;
         border: hidden;
-        width: 45%;
+        width: 55%;
         font-size: 20px;
         margin-bottom: 2em;
     }
@@ -741,7 +752,7 @@
 
     /*---------- SECTION DOS ----------*/
     .sectionDos{
-        margin-top: 4em;
+        margin-top: 2em;
         display: grid;
         grid-template-columns: repeat(3, 33.3333333333%);
         grid-template-rows: repeat(1, 100%);
@@ -756,22 +767,22 @@
     }
 
     .imgUno{
-        width: 40%;
+        width: 30%;
     }
 
     .divUnoInterno{
-        width: 60%;
+        width: 70%;
         padding: 1rem;
     }
 
     .divUnoInterno > h1{
         color: hsl(233, 8%, 79%);
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .divUnoInterno > h2{
         color: hsl(240, 100%, 5%);
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .divUnoInterno > h2:hover{
@@ -779,7 +790,7 @@
     }
 
     .divUnoInterno > p{
-        font-size: 23px;
+        font-size: 19px;
         color: lightslategray
     }
 
@@ -791,30 +802,30 @@
     }
 
     .imgDos{
-        width: 40%;
+        width: 30%;
     }
 
     .divDosInterno{
-        width: 60%;
+        width: 70%;
         padding: 1rem;
     }
 
     .divDosInterno > h1{
         color: hsl(233, 8%, 79%);
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .divDosInterno > h2{
         color: hsl(240, 100%, 5%);
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .divDosInterno > h2:hover{
         color: hsl(5, 85%, 63%);
     }
 
-    .divUnoInterno > p{
-        font-size: 23px;
+    .divDosInterno > p{
+        font-size: 19px;
         color: lightslategray;
     }
 
@@ -826,23 +837,23 @@
     }
 
     .imgTres{
-        width: 40%;
+        width: 30%;
     }
 
     .divTresInterno{
-        width: 60%;
+        width: 70%;
         padding: 1rem;
     }
 
     .divTresInterno > h1{
         color: hsl(233, 8%, 79%);
-        font-size: 50px;
+        font-size: 35px;
 
     }
 
     .divTresInterno > h2{
         color: hsl(240, 100%, 5%);
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .divTresInterno > h2:hover{
@@ -850,7 +861,7 @@
     }
 
     .divTresInterno > p{
-        font-size: 23px;
+        font-size: 19px;
         color: lightslategray;
     }
 }
